@@ -24,25 +24,11 @@ public class CountryService {
         return countryDetails;
     }
 
-    public Country getCountry(String alpha2code){
-        return countryDetails.stream().filter(t -> t.getAlpha2Code().equals(alpha2code)).findFirst().get();
+    public Country getCountry(String alpha2Code){
+        return countryDetails.stream().filter(t -> t.getAlpha2Code().equals(alpha2Code)).findFirst().get();
     }
 
     public void addCountry(Country newCountry) {
          countryDetails.add(newCountry);
     }
-
-//    public void updateCountry(Country country, String id) {
-//        for(int i = 0; i< countryDetails.size(); i++){
-//            Country stud = countryDetails.get(i);
-//            if(stud.getCountryName().equals(id)){
-//                countryDetails.set(i, country);
-//                return;
-//            }
-//        }
-//    }
-//
-//    public void deleteCountry(String id) {
-//        countryDetails.removeIf(t -> t.getCountryName().equals(id));
-//    }
 }

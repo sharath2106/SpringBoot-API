@@ -23,19 +23,8 @@ public class HelloController {
         return countryService.getCountry(alpha2code);
     }
 
-    @PostMapping(value = "/newcountry")
+    @PostMapping(path = "/addNewCountry", consumes = "application/json", produces = "application/json")
     public void addNewCountry(@RequestBody Country country) {
         countryService.addCountry(country);
     }
-//
-//    @PutMapping(value = "/hello/{id}")
-//    public void updateCountry(@RequestBody Country country, @PathVariable String id) {
-//        countryService.updateCountry(country, id);
-//    }
-//
-//    @DeleteMapping(value = "/hello/{id}")
-//    public void updateCountry(@PathVariable String id) {
-//        countryService.deleteCountry(id);
-//    }
-
 }
